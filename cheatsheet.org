@@ -1,0 +1,69 @@
+
+# Default template 
+#+OPTIONS: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline author:t
+#+OPTIONS: broken-links:nil c:nil creator:nil d:(not "LOGBOOK") date:t e:t
+#+OPTIONS: email:nil f:t inline:t num:t p:nil pri:nil prop:nil stat:t tags:t
+#+OPTIONS: tasks:t tex:t timestamp:t title:nil toc:nil todo:t |:t
+#+TITLE: Cheatsheet
+#+DATE: 
+#+AUTHOR: Bamse
+#+EMAIL: jonan15@student.sdu.dk
+#+LANGUAGE: en
+#+SELECT_TAGS: export
+#+EXCLUDE_TAGS: noexport
+#+CREATOR: Emacs 25.2.2 (Org mode 9.1.14)
+
+
+# Latex template
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [landscape]
+#+LATEX_HEADER:
+#+LATEX_HEADER_EXTRA:
+#+DESCRIPTION:
+#+KEYWORDS:
+#+SUBTITLE:
+#+LATEX_COMPILER: pdflatex
+#+DATE: \today
+
+
+# To export to github markdown, do org-gfm-export-to-markdown from the ox-gfm
+# package. Go to the generated file and press tab on the separator line in the
+# table to align it properly. Then run flymd-flyit to see it in Firefox choose
+# GFMize and GFM Mode in the browser.
+
+** Cheatsheet
+
+| *EDIT*                     |         | *BUFFERS*            |                            | *MAGIT*    |             |
+|----------------------------+---------+----------------------+----------------------------+------------+-------------|
+| *Kill line*                | C-k     | *Open buffers*       | C-x b                      | *Open*     | M-m g s     |
+| *Kill region*              | C-w     | *Kill buffers*       | <Mark buffers to kill> M-D |            |             |
+| *Copy region to kill-ring* | M-w     | *Swap windows*       | M-m w M                    |            |             |
+| *Yank*                     | C-y     | *MOVEMENT*           |                            | *ORG MODE* |             |
+| *Cycle kill-ring*          | M-y     | *Next word*          | M-f                        | Insert row | M-RET t i r |
+| *Place marker*             | C-SPC   | *Previous word*      | M-b                        |            |             |
+|                            |         | *Beginning of line*  | C-a                        |            |             |
+|                            |         | *End of line*        | C-e                        |            |             |
+| *Toggle line numbers*      | M-m t n | *New Scratch buffer* | M-m b s                    |            |             |
+
+
+** Generals
+Key combinations have special notation, such as C-x SPC. A space in the notation
+means you release the keys before pressing the next, whereas a dash, '-', means
+holding them down at the same time. When dashes appear usually everything but
+the last character symbolizes a modifier key, where Ctrl is C, Alt is M and
+Shift is S. The last character is usually an upper or lowercase character, but
+might also be a special key e.g. SPC (spacebar) or TAB. If it is an uppercase
+character it is an implicit Shift.
+
+Some examples are:
+- C-x SPC, meaning hold down Ctrl and press x, release and press spacebar.
+- M-x, hold down Alt and press x.
+- C-N, hold down Ctrl and Shift, then press n.
+- C-c C-e l o, hold down Ctrl and press c, then after releasing c (you may also
+  release Ctrl, but remember to press it again) press e, release all keys and
+  press l and then o.
+
+If you ever find yourself stuck writing a command, press C-g (Ctrl and g) to cancel.
+
+You can always try searching for your command by pressing M-x and writing some
+of what you want to do.

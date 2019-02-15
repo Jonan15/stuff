@@ -1,0 +1,43 @@
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\date{\textit{<2018-12-19 Wed>}}
+\title{(Less) Popular sorting algorithms}
+\hypersetup{
+ pdfauthor={Bamse},
+ pdftitle={(Less) Popular sorting algorithms},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 25.2.2 (Org mode 9.1.14)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\begin{center}
+\begin{tabular}{l p{0.5\textwidth} p{0.3\textwidth}}
+\textbf{Name} & \textbf{Description} & \textbf{Notes}\\
+Bogosort & Check if the list  sorted, if not randomly permute the list, repeat. & Also known as: Monkey sort, random sort, and many more. Expected average runtime \(\Omega(n \cdot n !)\). Further reading: look up Bogobogosort.\\
+Quantum bogosort & Randomly permute the list without observing it, in all universes, if it is not solved destroy the universe. In any remaining universes the list was sorted, choose one to return. & \\
+Sleepsort & For each element in the list, start a new process which sleeps for an amount of time proportional to the size of the element, then emits it. & Input should be positive integers.\\
+Usersort & Prompt the user to sort the list. & \\
+Stacksort & Search Stack Overflow for "sort a list" and run random code snippets until the list is sorted. & \\
+Hanoisort & For each element in the list, create a disc with radius size proportional to the size of the element (add a large enough constant to all discs if there are non-positive numbers). Put all discs on the first peg (this may violate the game rules). Move all discs to the third peg. Output the sorted elements. & Based on Tower of Hanoi. There are two rules. 1) You can only move one disc at a time. 2) You cannot place a larger disc atop a smaller.\\
+Stalinsort & Go through the list, eliminate any element which is not in order. & Also known as Dropsort.\\
+Diamondsort & For each element, create a population of human hunter-gatherers and place them in a region with a number of domesticable animal and plant species proportional to the size of the element. The first society to invent guns corresponds to the largest number in the list, at which point the rest of the numbers quickly become irrelevant. & Can be made to run in \(O(1)\) time, but the constant is around 13,000 years. See also: Jared Diamond's book "Guns, Germs, and Steel".\\
+Intelligent design sort & The probability of the list being in the exact order it is, is 1 in \(n!\). This probability is so low that it is absurd to think this happened by coincidence, clearly it was put in this order by some higher intelligence, and any attempt to put it in any other order would make it less sorted. & The algorithm runs in \(O(0)\) time, but any call to the algorithm ofcourse requires \(O(1)\) time.\\
+Nosort & Check if the list is sorted, if not, sleep for a set amount of time e.g. 30 minutes, repeat. & Bombard the computer with radiation for better performance.\\
+\end{tabular}
+\end{center}
+\end{document}

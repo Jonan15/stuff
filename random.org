@@ -1,0 +1,11 @@
+* "Random Spotify entry"
+
+#+BEGIN_SRC elisp
+(setq mylist '("a" "b" "c" "d" "e" "f" "g" "h" "j" "i" "k" "l" "m" "n" "o" "p" "q" "r" "s" "t" "u" "v" "w" "x" "y" "z" "æ" "ø" "å" "1"))
+
+(print (list (nth (random (length mylist)) mylist) (nth (random (length mylist)) mylist) (nth (random (length mylist)) mylist) ))
+
+#+END_SRC
+
+#+RESULTS:
+| p | ø | æ |

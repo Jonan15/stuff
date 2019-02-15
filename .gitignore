@@ -1,0 +1,6 @@
+*.aux
+*.log
+*.html
+*.pdf
+!algorithms.pdf
+*.out

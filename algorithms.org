@@ -1,0 +1,45 @@
+#+OPTIONS: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline author:nil
+#+OPTIONS: broken-links:nil c:nil creator:nil d:(not "LOGBOOK") date:t e:t
+#+OPTIONS: email:nil f:nil inline:t num:t p:nil pri:nil prop:nil stat:nil tags:t
+#+OPTIONS: tasks:t tex:t timestamp:nil title:t toc:nil todo:t |:t
+#+TITLE: (Less) Popular sorting algorithms
+#+DATE: <2018-12-19 Wed>
+#+AUTHOR: Bamse
+#+EMAIL: jonan15@student.sdu.dk
+#+LANGUAGE: en
+#+SELECT_TAGS: export
+#+EXCLUDE_TAGS: noexport
+#+CREATOR: Emacs 25.2.2 (Org mode 9.1.14)
+
+#+OPTIONS: html-link-use-abs-url:nil html-postamble:auto html-preamble:t html-postamble:nil
+#+OPTIONS: html-scripts:t html-style:t html5-fancy:nil tex:t
+#+HTML_DOCTYPE: xhtml-strict
+#+HTML_CONTAINER: div
+#+DESCRIPTION:
+#+KEYWORDS:
+#+HTML_LINK_HOME:
+#+HTML_LINK_UP:
+#+HTML_MATHJAX:
+#+HTML_HEAD:
+#+HTML_HEAD_EXTRA:
+#+SUBTITLE:
+#+INFOJS_OPT:
+#+CREATOR: <a href="https://www.gnu.org/software/emacs/">Emacs</a> 25.2.2 (<a href="https://orgmode.org">Org</a> mode 9.1.14)
+#+LATEX_HEADER:
+
+
+
+| *Name*                  | *Description*                                                                                                                                                                                                                                                                                                                                | *Notes*                                                                                                                                             |
+| Bogo Sort               | Check if the list is sorted, if not randomly permute the list, repeat.                                                                                                                                                                                                                                                                       | Also known as: Monkey sort, random sort, and many more. Expected average runtime $\Omega(n \cdot n !)$. Further reading: look up Bogobogosort.      |
+| Quantum Bogo Sort       | Randomly permute the list without observing it, this divides our universe into multiple universes with different permutations. Destroy a universe if the list is not sorted in it. In any remaining universes the list was sorted, choose one to return.                                                                                     |                                                                                                                                                     |
+| Sleep Sort              | For each element in the list, start a new process which sleeps for an amount of time proportional to the size of the element, then emits it.                                                                                                                                                                                                 | Input should be positive integers.                                                                                                                  |
+| User Sort               | Prompt the user to sort the list. Check if the list is sorted, if not repeat.                                                                                                                                                                                                                                                                |                                                                                                                                                     |
+| Stack Sort              | The algorithm searches Stack Overflow with the search string "sort a list" and run random code snippets until the list is sorted.                                                                                                                                                                                                            |                                                                                                                                                     |
+| Hanoi Sort              | For each element in the list, create a disc with radius size proportional to the size of the element (add a large enough constant to all discs if there are non-positive numbers). Put all discs on the first peg (this may violate the game rules). Move all discs to the third peg. Output the sorted elements.                            | Based on Tower of Hanoi. There are two rules. 1) You can only move one disc at a time. 2) You cannot place a larger disc atop a smaller.            |
+| Stalin Sort             | Go through the list, eliminate any element which is not in order.                                                                                                                                                                                                                                                                            | Also known as Dropsort.                                                                                                                             |
+| Diamond Sort            | For each element, create a population of human hunter-gatherers and place them in a region with a number of domesticable animal and plant species proportional to the size of the element. The first society to invent guns corresponds to the largest number in the list, at which point the rest of the numbers quickly become irrelevant. | Can be made to run in $O(1)$ time, but the constant is around 13,000 years. See also: Jared Diamond's book "Guns, Germs, and Steel".                |
+| Intelligent Design Sort | The probability of the list being in the exact order it is, is 1 in $n!$. This probability is so low that it is absurd to think this happened by coincidence, clearly it was put in this order by some higher intelligence, and any attempt to put it in any other order would make it less sorted.                                          | The algorithm runs in $O(0)$ time, but any call to the algorithm ofcourse requires $O(1)$ time.                                                     |
+| Slow Sort               | Recursively sort the two halves of the list. The last element of each half are candidates to be the maximum of the entire list, put that element at the end. Recursively sort the rest of the list.                                                                                                                                          | The algorithm has simplexity $\Omega(n^{\left(\frac{log_2(n)}{2+\epsilon}\right)})$. It is a prime example of a /Multiply-and-Surrender/ algorithm. |
+| No Sort                 | Check if the list is sorted, if not, sleep for a set amount of time e.g. 30 minutes, repeat.                                                                                                                                                                                                                                                 | Bombard the computer with radiation for better performance.                                                                                         |
+
+
